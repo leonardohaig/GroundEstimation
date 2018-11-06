@@ -33,7 +33,7 @@ bool SGMStereo::process(const Mat& left, const Mat& right)
 	return true;
 }
 
-Mat SGMStereo::getDisparity() //TODO ÕâÀï×îºÃ¼ÓÒ»¸ö²ÎÊı£¬±íÃ÷Êä³öÊ²Ã´¸ñÊ½µÄÊÓ²îÍ¼£¨»Ò¶È£¬RGB£©
+Mat SGMStereo::getDisparity() //TODO è¿™é‡Œæœ€å¥½åŠ ä¸€ä¸ªå‚æ•°ï¼Œè¡¨æ˜è¾“å‡ºä»€ä¹ˆæ ¼å¼çš„è§†å·®å›¾ï¼ˆç°åº¦ï¼ŒRGBï¼‰
 {
 	return mDisp;
 }

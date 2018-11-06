@@ -216,7 +216,7 @@ void GroundEstimator::groundPlaneEstimation()
 		mPlaneValid = true;
 		for (int v = 0; v < height; v++)
 		{
-			uint8_t* pRowInDisp = mDisparity->ptr<uchar>(v);    //TODO£ºÕâÀïÒª¸ù¾İÊäÈëµ÷Õû£¬ÒÔºóÒªÓÃµ½floatµÄÊäÈë
+			uint8_t* pRowInDisp = mDisparity->ptr<uchar>(v);    //TODOï¼šè¿™é‡Œè¦æ ¹æ®è¾“å…¥è°ƒæ•´ï¼Œä»¥åè¦ç”¨åˆ°floatçš„è¾“å…¥
 			uint8_t* pRowInGndMap = mGroundMapWithPlane.ptr<uchar>(v);
 			for (int u = 0; u < width; u++)
 			{

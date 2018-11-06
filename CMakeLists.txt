@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8)
 
 project( GroundEstimation )
 
-set(OpenCV_DIR "/home/richard/installed/opencv-3.4.0/release")
+set(OpenCV_DIR "E:\\OpenCV3.1.0\\mingw_build\\install")
 
 find_package( OpenCV REQUIRED )
 

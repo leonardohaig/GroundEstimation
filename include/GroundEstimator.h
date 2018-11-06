@@ -15,8 +15,8 @@ public:
 		float mCV;
 		float mBaseline;
 		float mFocal;
-		int   mUDispThres;   // ÓÃÓÚÔÚUÊÓ²îÍ¼ÖĞ³õ²½É¸Ñ¡ÕÏ°­ÎïÇøÓò
-		float mSigma;        // ÓÃÓÚ¶ÔVÊÓ²îÍ¼½øĞĞºó´¦ÀíÓÃµ½µÄ²ÎÊı£¨¸ßË¹Ä£ºıµÄ±ê×¼²î£©
+		int   mUDispThres;   // ç”¨äºåœ¨Uè§†å·®å›¾ä¸­åˆæ­¥ç­›é€‰éšœç¢ç‰©åŒºåŸŸ
+		float mSigma;        // ç”¨äºå¯¹Vè§†å·®å›¾è¿›è¡Œåå¤„ç†ç”¨åˆ°çš„å‚æ•°ï¼ˆé«˜æ–¯æ¨¡ç³Šçš„æ ‡å‡†å·®ï¼‰
 		float mGroundLineBias;
 		float mSlopeAngle;
 		Parameter() :mCU(0), mBaseline(0), mFocal(0), mCV(0), mUDispThres(10), mSigma(0.7), mGroundLineBias(-20), mSlopeAngle(10){}
@@ -54,11 +54,11 @@ private:
 	bool  mPlaneValid;
 
 	void computeUDisparity();	  
-	void removeObstacle();        // Í¨¹ıUdispMap³õ²½½«ÕÏ°­ÎïÇøÓòÉ¸Ñ¡³öÀ´
-	void computeVDisparity();     // »ùÓÚUdisp³õ²½¹ıÂËÖ®ºó£¬¼ÆËãVÊÓ²î¿Õ¼äµÄÍ¶Ó°
-	void refineVdispMap();        // ½«vdisp½øĞĞÄ£ºıÒÔ¼°±ßÔµ¼ì²â
-	bool groundLineFromVDisp();   // ½«Ï¸»¯ºóµÄVdisp½øĞĞÖ±Ïß¼ì²â£¬µÃµ½f[d] = v
-	void groundMapExtraction();   // ´Óf[d] =vÖĞµÃµ½Í¼ÖĞµÄ³õ²½Â·ÃæÇøÓò
-	void groundPlaneEstimation(); // RANSACµÀÂ·Æ½ÃæÄâºÏ
-	void groundPlaneRefinement(); // ¸ù¾İRANSACµÄ½á¹ûÀ´½øĞĞÂ·ÃæµÄÏ¸»¯
+	void removeObstacle();        // é€šè¿‡UdispMapåˆæ­¥å°†éšœç¢ç‰©åŒºåŸŸç­›é€‰å‡ºæ¥
+	void computeVDisparity();     // åŸºäºUdispåˆæ­¥è¿‡æ»¤ä¹‹åï¼Œè®¡ç®—Vè§†å·®ç©ºé—´çš„æŠ•å½±
+	void refineVdispMap();        // å°†vdispè¿›è¡Œæ¨¡ç³Šä»¥åŠè¾¹ç¼˜æ£€æµ‹
+	bool groundLineFromVDisp();   // å°†ç»†åŒ–åçš„Vdispè¿›è¡Œç›´çº¿æ£€æµ‹ï¼Œå¾—åˆ°f[d] = v
+	void groundMapExtraction();   // ä»f[d] =vä¸­å¾—åˆ°å›¾ä¸­çš„åˆæ­¥è·¯é¢åŒºåŸŸ
+	void groundPlaneEstimation(); // RANSACé“è·¯å¹³é¢æ‹Ÿåˆ
+	void groundPlaneRefinement(); // æ ¹æ®RANSACçš„ç»“æœæ¥è¿›è¡Œè·¯é¢çš„ç»†åŒ–
 };
